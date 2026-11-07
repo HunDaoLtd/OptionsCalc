@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0",
+  "synthetic": true,
+  "capturedAtMs": 1785542401000,
+  "description": "Synthetic Classic Options Margin snapshot. It contains no Binance credentials or real account identifiers.",
+  "responses": {
+    "time": {
+      "serverTime": 1785542400000
+    },
+    "exchangeInfo": {
+      "timezone": "UTC",
+      "serverTime": 1785542400000,
+      "optionContracts": [
+        {
+          "baseAsset": "BTC",
+          "quoteAsset": "USDT",
+          "underlying": "BTCUSDT",
+          "settleAsset": "USDT"
+        }
+      ],
+      "optionAssets": [
+        {
+          "name": "USDT"
+        }
+      ],
+      "optionSymbols": [
+        {
+          "expiryDate": 1785657600000,
+          "symbol": "BTC-260802-60000-P",
+          "side": "PUT",
+          "strikePrice": "60000",
+          "underlying": "BTCUSDT",
+          "unit": 1,
+          "liquidationFeeRate": "0.0019",
+          "initialMargin": "0.15",
+          "maintenanceMargin": "0.075",
+          "minInitialMargin": "0.10",
+          "minMaintenanceMargin": "0.05",
+          "quoteAsset": "USDT",
+          "contractType": "CRYPTO_OPTIONS",
+          "underlyingType": "CRYPTO",
+          "status": "TRADING"
+        },
+        {
+          "expiryDate": 1786176000000,
+          "symbol": "BTC-260808-65000-C",
+          "side": "CALL",
+          "strikePrice": "65000",
+          "underlying": "BTCUSDT",
+          "unit": 1,
+          "liquidationFeeRate": "0.0019",
+          "initialMargin": "0.15",
+          "maintenanceMargin": "0.075",
+          "minInitialMargin": "0.10",
+          "minMaintenanceMargin": "0.05",
+          "quoteAsset": "USDT",
+          "contractType": "CRYPTO_OPTIONS",
+          "underlyingType": "CRYPTO",
+          "status": "TRADING"
+        },
+        {
+          "expiryDate": 1787990400000,
+          "symbol": "BTC-260829-62000-P",
+          "side": "PUT",
+          "strikePrice": "62000",
+          "underlying": "BTCUSDT",
+          "unit": 1,
+          "liquidationFeeRate": "0.0019",
+          "initialMargin": "0.15",
+          "maintenanceMargin": "0.075",
+          "minInitialMargin": "0.10",
+          "minMaintenanceMargin": "0.05",
+          "quoteAsset": "USDT",
+          "contractType": "CRYPTO_OPTIONS",
+          "underlyingType": "CRYPTO",
+          "status": "TRADING"
+        },
+        {
+          "expiryDate": 1787990400000,
+          "symbol": "BTC-260829-68000-C",
+          "side": "CALL",
+          "strikePrice": "68000",
+          "underlying": "BTCUSDT",
+          "unit": 1,
+          "liquidationFeeRate": "0.0019",
+          "initialMargin": "0.15",
+          "maintenanceMargin": "0.075",
+          "minInitialMargin": "0.10",
+          "minMaintenanceMargin": "0.05",
+          "quoteAsset": "USDT",
+          "contractType": "CRYPTO_OPTIONS",
+          "underlyingType": "CRYPTO",
+          "status": "TRADING"
+        },
+        {
+          "expiryDate": 1790323200000,
+          "symbol": "BTC-260925-55000-P",
+          "side": "PUT",
+          "strikePrice": "55000",
+          "underlying": "BTCUSDT",
+          "unit": 1,
+          "liquidationFeeRate": "0.0019",
+          "initialMargin": "0.15",
+          "maintenanceMargin": "0.075",
+          "minInitialMargin": "0.10",
+          "minMaintenanceMargin": "0.05",
+          "quoteAsset": "USDT",
+          "contractType": "CRYPTO_OPTIONS",
+          "underlyingType": "CRYPTO",
+          "status": "TRADING"
+        },
+        {
+          "expiryDate": 1790323200000,
+          "symbol": "BTC-260925-70000-C",
+          "side": "CALL",
+          "strikePrice": "70000",
+          "underlying": "BTCUSDT",
+          "unit": 1,
+          "liquidationFeeRate": "0.0019",
+          "initialMargin": "0.15",
+          "maintenanceMargin": "0.075",
+          "minInitialMargin": "0.10",
+          "minMaintenanceMargin": "0.05",
+          "quoteAsset": "USDT",
+          "contractType": "CRYPTO_OPTIONS",
+          "underlyingType": "CRYPTO",
+          "status": "TRADING"
+        }
+      ]
+    },
+    "mark": [
+      {
+        "symbol": "BTC-260802-60000-P",
+        "markPrice": "650",
+        "markIV": "0.55",
+        "riskFreeInterest": "0.03"
+      },
+      {
+        "symbol": "BTC-260808-65000-C",
+        "markPrice": "450",
+        "markIV": "0.52",
+        "riskFreeInterest": "0.03"
+      },
+      {
+        "symbol": "BTC-260829-62000-P",
+        "markPrice": "2100",
+        "markIV": "0.65",
+        "riskFreeInterest": "0.03"
+      },
+      {
+        "symbol": "BTC-260829-68000-C",
+        "markPrice": "900",
+        "markIV": "0.60",
+        "riskFreeInterest": "0.03"
+      },
+      {
+        "symbol": "BTC-260925-55000-P",
+        "markPrice": "1400",
+        "markIV": "0.67",
+        "riskFreeInterest": "0.03"
+      },
+      {
+        "symbol": "BTC-260925-70000-C",
+        "markPrice": "600",
+        "markIV": "0.58",
+        "riskFreeInterest": "0.03"
+      }
+    ],
+    "index": {
+      "time": 1785542400000,
+      "indexPrice": "62885.16"
+    },
+    "marginAccount": {
+      "asset": [
+        {
+          "asset": "USDT",
+          "marginBalance": "18937.454137",
+          "equity": "18263.454137",
+          "available": "4967.659525",
+          "initialMargin": "16000",
+          "maintMargin": "13295.794612",
+          "unrealizedPNL": "-674",
+          "adjustedEquity": "18263.454137"
+        }
+      ],
+      "greek": [
+        {
+          "underlying": "BTCUSDT",
+          "delta": "-0.05",
+          "gamma": "-0.0002",
+          "theta": "-18.2",
+          "vega": "42.8"
+        }
+      ],
+      "time": 1785542400900,
+      "canTrade": true,
+      "canDeposit": true,
+      "canWithdraw": true,
+      "reduceOnly": false,
+      "tradeGroupId": -1
+    },
+    "position": [
+      {
+        "entryPrice": "750",
+        "symbol": "BTC-260802-60000-P",
+        "side": "SHORT",
+        "quantity": "-1.2",
+        "markValue": "780",
+        "unrealizedPNL": "-120",
+        "markPrice": "650",
+        "strikePrice": "60000",
+        "expiryDate": 1785657600000,
+        "optionSide": "PUT",
+        "quoteAsset": "USDT",
+        "time": 1785542400200
+      },
+      {
+        "entryPrice": "321.428571",
+        "symbol": "BTC-260808-65000-C",
+        "side": "SHORT",
+        "quantity": "-0.7",
+        "markValue": "315",
+        "unrealizedPNL": "-90",
+        "markPrice": "450",
+        "strikePrice": "65000",
+        "expiryDate": 1786176000000,
+        "optionSide": "CALL",
+        "quoteAsset": "USDT",
+        "time": 1785542400300
+      },
+      {
+        "entryPrice": "1712.5",
+        "symbol": "BTC-260829-62000-P",
+        "side": "SHORT",
+        "quantity": "-0.8",
+        "markValue": "1680",
+        "unrealizedPNL": "-310",
+        "markPrice": "2100",
+        "strikePrice": "62000",
+        "expiryDate": 1787990400000,
+        "optionSide": "PUT",
+        "quoteAsset": "USDT",
+        "time": 1785542400400
+      },
+      {
+        "entryPrice": "700",
+        "symbol": "BTC-260829-68000-C",
+        "side": "LONG",
+        "quantity": "0.5",
+        "markValue": "450",
+        "unrealizedPNL": "100",
+        "markPrice": "900",
+        "strikePrice": "68000",
+        "expiryDate": 1787990400000,
+        "optionSide": "CALL",
+        "quoteAsset": "USDT",
+        "time": 1785542400500
+      },
+      {
+        "entryPrice": "1275",
+        "symbol": "BTC-260925-55000-P",
+        "side": "LONG",
+        "quantity": "0.4",
+        "markValue": "560",
+        "unrealizedPNL": "50",
+        "markPrice": "1400",
+        "strikePrice": "55000",
+        "expiryDate": 1790323200000,
+        "optionSide": "PUT",
+        "quoteAsset": "USDT",
+        "time": 1785542400600
+      },
+      {
+        "entryPrice": "1613.333333",
+        "symbol": "BTC-260925-70000-C",
+        "side": "SHORT",
+        "quantity": "-0.3",
+        "markValue": "180",
+        "unrealizedPNL": "-304",
+        "markPrice": "600",
+        "strikePrice": "70000",
+        "expiryDate": 1790323200000,
+        "optionSide": "CALL",
+        "quoteAsset": "USDT",
+        "time": 1785542400700
+      }
+    ]
+  },
+  "expectedNormalized": {
+    "indexPrice": 62885.16,
+    "marketSourceTimeMs": 1785542400000,
+    "currentSourceTimeMs": 1785542400200,
+    "officialAdjustedEquity": 18263.454137,
+    "officialMaintenanceMargin": 13295.794612,
+    "currentLongOptionValue": 1010,
+    "derivedWalletBalance": 17253.454137,
+    "unrealizedPnl": -674,
+    "positionCount": 6,
+    "sourceSkewMs": 700
+  }
+}

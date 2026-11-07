@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.0",
+  "numericConvention": {
+    "money": "USDT",
+    "timestamps": "integer milliseconds",
+    "quantity": "signed contracts",
+    "yearMilliseconds": 31536000000,
+    "internalRounding": "none"
+  },
+  "blackScholes": [
+    {
+      "name": "at-the-money one-year option",
+      "input": {
+        "indexPrice": 100,
+        "strikePrice": 100,
+        "timeYears": 1,
+        "riskFreeInterest": 0.05,
+        "volatility": 0.2,
+        "unit": 1
+      },
+      "expected": {
+        "d1": 0.35,
+        "d2": 0.15,
+        "callPrice": 10.450583572185565,
+        "putPrice": 5.573526022256971
+      }
+    }
+  ],
+  "otmAmount": [
+    {
+      "optionSide": "CALL",
+      "indexPrice": 62885.16,
+      "strikePrice": 65000,
+      "expected": -2114.84
+    },
+    {
+      "optionSide": "PUT",
+      "indexPrice": 62885.16,
+      "strikePrice": 60000,
+      "expected": -2885.16
+    },
+    {
+      "optionSide": "PUT",
+      "indexPrice": 60000,
+      "strikePrice": 62000,
+      "expected": 0
+    }
+  ],
+  "maintenanceMargin": [
+    {
+      "name": "short put with dynamic exchange rates",
+      "input": {
+        "optionSide": "PUT",
+        "indexPrice": 62885.16,
+        "strikePrice": 60000,
+        "optionPrice": 650,
+        "unit": 1,
+        "maintenanceMarginRate": 0.075,
+        "minMaintenanceMarginRate": 0.05,
+        "liquidationFeeRate": 0.0019,
+        "quantity": -1.2
+      },
+      "expected": {
+        "otmAmount": -2885.16,
+        "maintenanceMargin": 4696.4877648
+      }
+    }
+  ],
+  "adjustedEquity": [
+    {
+      "officialAdjustedEquity": 18263.454137,
+      "currentLongPositionMarkValues": [450, 560],
+      "expectedDerivedWalletBalance": 17253.454137
+    },
+    {
+      "derivedWalletBalance": 17253.454137,
+      "scenarioLongOptionValues": [575, 625],
+      "expiredPositionSettlementCashflows": [-3507.35, 1997],
+      "expectedScenarioAdjustedEquity": 16943.104137
+    }
+  ],
+  "settlement": [
+    {
+      "name": "expired short call",
+      "input": {
+        "optionSide": "CALL",
+        "settlementPrice": 70000,
+        "strikePrice": 65000,
+        "unit": 1,
+        "quantity": -0.7
+      },
+      "expected": {
+        "payoffPerContract": 5000,
+        "exerciseFee": 7.35,
+        "settlementCashflow": -3507.35
+      }
+    },
+    {
+      "name": "expired long put",
+      "input": {
+        "optionSide": "PUT",
+        "settlementPrice": 50000,
+        "strikePrice": 55000,
+        "unit": 1,
+        "quantity": 0.4
+      },
+      "expected": {
+        "payoffPerContract": 5000,
+        "exerciseFee": 3,
+        "settlementCashflow": 1997
+      }
+    }
+  ],
+  "triggerConditions": [
+    {
+      "input": {
+        "maintenanceMargin": 95,
+        "adjustedEquity": 100,
+        "derivedWalletBalance": 5,
+        "eligibleLongOptionValue": 95
+      },
+      "expectedTriggered": true,
+      "expectedReason": "margin_ratio_threshold"
+    },
+    {
+      "input": {
+        "maintenanceMargin": 1,
+        "adjustedEquity": 0,
+        "derivedWalletBalance": -1,
+        "eligibleLongOptionValue": 0
+      },
+      "expectedTriggered": true,
+      "expectedReason": "non_positive_adjusted_equity"
+    },
+    {
+      "input": {
+        "maintenanceMargin": 0,
+        "adjustedEquity": 5,
+        "derivedWalletBalance": -95,
+        "eligibleLongOptionValue": 100
+      },
+      "expectedTriggered": true,
+      "expectedReason": "negative_wallet_long_value_ratio"
+    },
+    {
+      "input": {
+        "maintenanceMargin": 0,
+        "adjustedEquity": -1,
+        "derivedWalletBalance": -1,
+        "eligibleLongOptionValue": 0
+      },
+      "expectedTriggered": null,
+      "expectedIssue": "no_eligible_long_option_value"
+    }
+  ],
+  "timeBoundaries": {
+    "expiredWhen": "valuationTimeMs >= expiryMs",
+    "nearExpiryWhen": "expiryMs - 1800000 <= valuationTimeMs < expiryMs"
+  },
+  "rootSearch": {
+    "currentIndexPrice": 62885.16,
+    "expectedMinimum": 12577.032,
+    "expectedMaximum": 125770.32,
+    "minimumSampleCount": 2001,
+    "boundaryToleranceUsdt": 1
+  }
+}
